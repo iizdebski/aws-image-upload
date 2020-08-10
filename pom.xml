@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.izdebski</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>awsimageupload</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>aws-image-upload</name>
-	<description>Demo project for Spring Boot</description>
+	<description>AWS Image Upload</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -35,6 +35,14 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.837</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -1,4 +1,4 @@
-package com.izdebski.demo;
+package com.izdebski.awsimageupload;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
