@@ -19,6 +19,7 @@ public class AmazonConfig {
 
         return AmazonS3ClientBuilder
                 .standard()
+                .withRegion("us-east-1") // The first region to try your request against
                 .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
                 .build();
     }
