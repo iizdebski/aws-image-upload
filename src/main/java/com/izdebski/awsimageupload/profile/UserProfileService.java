@@ -23,12 +23,8 @@ public class UserProfileService {
         return userProfileDataAccessService.getUserProfiles();
     }
 
-    @PostMapping(
-            path = "{userProfileId}/image/download",
-            consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE
-    )
-    public void uploadUserProfileImage(UUID userProfileId, MultipartFile file) {
+
+    void uploadUserProfileImage(UUID userProfileId, MultipartFile file) {
         // 1. Check if image is not empty
         // 2. If file is an image
         // 3. The user exists in our database
