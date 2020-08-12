@@ -42,12 +42,12 @@ public class UserProfileService {
         Map<String, String> metadata = extractMetaData(file);
 
         // 5. Store the image in s3 and update database (userProfileImageLink) with s3 image link
-
         String path = String.format("%s/%s", BucketName.PROFILE_IMAGE.getBucketName(), user.getUserProfileId());
         String filename = String.format("%s-%s", file.getOriginalFilename(), UUID.randomUUID());
 
         try {
             fileStore.save(path, filename, Optional.of(metadata), file.getInputStream());
+            user.setUserProfileImageLink(filename);
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
