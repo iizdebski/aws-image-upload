@@ -53,7 +53,7 @@ public class UserProfileService {
         }
     }
 
-    public byte[] downloadUserProfileImage(UUID userProfileId) {
+    byte[] downloadUserProfileImage(UUID userProfileId) {
         UserProfile user = getUserProfileOrThrow(userProfileId);
 
         String path = String.format("%s/%s",
